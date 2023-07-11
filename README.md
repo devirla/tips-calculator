@@ -30,7 +30,7 @@ Project is created with:
 npm start
 
  Or you can directly visit
- https://devirla.github.io/currency-calculator/
+ https://devirla.github.io/tips-calculator/
 
 ## Project Status
 The project is finished. 
