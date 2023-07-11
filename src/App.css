@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+*, *::after, *:before {
+  box-sizing: border-box;
+}
+
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+
+}
+
+input{
+  background: var(--very-light-grayish-cyan);
+  color: var(--very-dark-cyan);
+  font-size: 1.5em;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+input:focus {
+  outline: none;
+  border: var(--strong-cyan) 2px solid;
+}
+/*--- THEMES --- */
+
+.darkTheme{
+  font-size: 1em;
+  color: var(--white);
+  background: var(--very-dark-cyan);
+  border-radius: 5px;
+  border: none;
+  padding: 7px;
+}
+
+.cyanTheme{
+  color: var(--dark-grayish-cyan);
+  background: var(--strong-cyan);
+}
+
+.activeTheme{
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+  
+}
+.activeThemeCustom{
+  background-color: var(--light-grayish-cyan);
+  border-color: var(--dark-grayish-cyan);
+  color: var(--very-dark-cyan);
+  
+}
+
+/*--- END THEMES --- */
+.App {
+  width: 100%;
+  min-width: 375px;
+  min-height: 100vh;
+  background: var(--light-grayish-cyan);
+  font-size: 16px;
+  font-family: 'Space Mono', monospace;
+  color: var(--dark-grayish-cyan);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App__logo{
+  width: 85px;
+  margin: 13% 8% 11% 8%;
+}
+
+.calculator{
+  background: var(--white);
+  border-radius: 25px 25px 0 0;
+  font-size: 0.9em;
+  letter-spacing: 0.1em;
+  padding: 9% 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.calculator__item{
+  margin: 0% 0 7% 0;
+}
+
+
+.calculator__input{
+  width: 95%;
+  border: none 2px solid;
+}
+
+.calculator__bill{
+  width: 100%;
+  background: var(--very-light-grayish-cyan) url(./images/icon-dollar.svg) no-repeat scroll 15px 12px;
+  text-align: right;
+  margin: 3% 0% 11% 0;
+  color: var(--grayish-cyan);
+}
+
+
+.calculator__tipButtons{
+  padding: 12px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;  
+}
+
+
+.calculator__people{
+  width: 100%;
+  background: var(--very-light-grayish-cyan) url(./images/icon-person.svg) no-repeat scroll 15px 12px;
+  text-align: right;
+  color: var(--grayish-cyan);
+  margin: 3% 0;
+}
+
+
+.calculator__result{
+  width: 100%;
+  padding: 13% 3% 0 5% ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 18px;
+}
+
+.calculator__resultSummary{
+  width: 100%;
+  
+}
+
+
+
+.tipButton{
+  width: 48%;
+  margin: 7px 0;
+  font-size: 1.7em;  
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+}
+
+.resultButton{
+  width: 92%;
+  text-transform:uppercase;
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  opacity: 0.4;
+  border-radius: 5px;
+  border: none;
+  margin: 2% 0 6% 0;
+  padding: 5%;
+
+}
+
+.customTipButton{
+  width: 48%;
+  padding: 5px 20px 5px 0px;
+  text-align: right;
+}
+
+
+
+
+@media screen and (min-width: 1000px){
+
+  .App__logo{
+    width: 85px;
+    margin: 11.4% 8% 6.1% 8%;
+  }
+
+
+  .calculator{ 
+    min-width: 50vw;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.2% 2% 0.5% 3.3%;
+    border-radius: 25px;
+  }
+
+  .calculator__input{
+    width: 95%;
+    padding-top: 2%;
+   }
+
+  .calculator__bill{
+    margin: 3% 0% 10% 0;
+    
+  }
+
+  .calculator__tipButtons{
+    width: 95%;
+  }
+
+  .tipButton{
+    width: 31%;
+    font-size: 1.2em; 
+    margin: 1% 0% 3% 0;
+    font-size: 1.7em;  
+  }
+
+  .calculator__result{
+    width: 92%;
+    margin-left: 3%;
+    padding: 6.5% 3% 0 5%;
+    align-self: flex-start;
+   }
+
+  .resultButton{
+    margin: 22% 0 11% 0;
+    width: 95%;
+    padding: 4% 0%;
+    align-self:flex-start;
+    
+  
+  }
+
+  
+  /* .App__logo{
+    width: 85px;
+    margin: 145px 0px 86px 0px;
+  }
+
+  .calculator{
+    width: 64vw;
+    min-height: 47vh;
+    border-radius: 25px;
+    flex-direction: row;
+    padding: 1% 1% 1% 4%;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    
+  }
+
+  
+
+  .calculator__inputBox{
+    width: 100%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+   
+  }
+
+  .calculator__item{
+    align-self: flex-start;
+    
+    width: 88%;
+  }
+
+  .calculator__input{
+    width: 88%;
+    height: 100%;  
+   
+  }
+  .calculator__people{
+    width: 100%;
+  }
+
+
+ .calculator__tipButtons{
+  margin-bottom: 2%;
+ }
+
+  .tipButton{
+    width: 31%;
+    font-size: 1.7em;
+  }
+
+  .calculator__result{
+    width: 82%;
+    margin: 0 10px 0 0px;
+    min-height: 60vh;
+    justify-content: space-between;
+
+  }
+
+  .calculator__resultSummary{
+    width: 100%;
+    padding: 32px 15px 0 13px;
+  }
+
+  .resultButton{
+    margin: 0px 0 29px 0;
+    width: 85%;
+  }
+ */
+
+}

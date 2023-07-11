@@ -1,0 +1,10 @@
+.label_box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.error_field{
+    color: red;
+    visibility: hidden;
+}
+
