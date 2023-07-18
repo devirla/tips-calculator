@@ -98,7 +98,6 @@ input:focus {
 
 .calculator__input{
   width: 95%;
-  border: none 2px solid;
 }
 
 .calculator__bill{
